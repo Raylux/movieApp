@@ -1,4 +1,4 @@
-import { BASE_URL, OPTIONS } from "./config";
+import { BASE_URL, OPTIONS } from "./config.js";
 
 /** getTrending
  * 
