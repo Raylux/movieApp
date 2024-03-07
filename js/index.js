@@ -1,5 +1,8 @@
-import { getTrending, getTrendingMovies } from "./API/trendingGetters.js";
-import { prefixUrlTrending } from "./API/config.js";
+import { getTrending, getTrendingMovies, getTrendingTVShows } from "./api/trendingGetters.js";
+import { searchPerson } from "./api/searchGetters.js";
 
-const trendingData = getTrending(prefixUrlTrending);
-const trendingMoviesData = getTrendingMovies(prefixUrlTrending);
+const trendingData = getTrending();
+const trendingMoviesData = getTrendingMovies();
+const trendingTVShowsData = getTrendingTVShows();
+
+const personSearchData = searchPerson("clooney");
