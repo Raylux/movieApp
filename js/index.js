@@ -1,8 +1,14 @@
-import { getTrending, getTrendingMovies, getTrendingTVShows } from "./api/trendingGetters.js";
+import { getTrending, getTrendingMovies, getTrendingPeople, getTrendingTVShows } from "./api/trendingGetters.js";
 import { searchPerson } from "./api/searchGetters.js";
+import { printAllTrending } from "./api/printMedia.js";
 
-const trendingData = getTrending();
-const trendingMoviesData = getTrendingMovies();
-const trendingTVShowsData = getTrendingTVShows();
+const trendingData = getTrending()
+    .then((data) => {
+        printAllTrending(data.results);
+    });
 
-const personSearchData = searchPerson("clooney");
+
+//const trendingPeopleData = getTrendingPeople();
+// const trendingMoviesData = getTrendingMovies();
+// const trendingTVShowsData = getTrendingTVShows();
+// const personSearchData = searchPerson("clooney");

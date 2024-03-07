@@ -36,3 +36,16 @@ export const getTrendingTVShows = async () => {
 
     return data;
 }
+
+
+/** getTrendingPeople
+ * 
+ * @returns list of trending people 
+ */
+export const getTrendingPeople = async () => {
+    const response = await fetch(BASE_URL +'trending/person/day?language=en-US', OPTIONS);
+
+    const data = await response.json();
+
+    return data;
+}
