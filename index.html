@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Titolo</h1>
+    <div id="card-container">
+        
+    </div>
+    <ul id="movie-list"></ul>
+</body>
+
+<script type="module">
+    import { printAllTrending, getTrendingMovies, createList } from "./js/index.js";
+
+    const trendingData = getTrendingMovies()
+    .then((data) => {
+        createList("movie-list", data.results);
+    });
+</script>
+</html>

@@ -9,6 +9,7 @@ export const printMovieDetails = (movie) => {
     );
 }
 
+
 export const printTvShowDetails = (tvShow) => {
     console.log(
         `Title: ${tvShow.name}\n` +
@@ -30,6 +31,10 @@ export const printPersonDetails = (person) => {
     );
 }
 
+
+/**
+ * Cycle through the array of trending medias 
+ */
 export const printAllTrending = (resultsArray) => {
     resultsArray.forEach((element) => {
         switch (element.media_type) {
