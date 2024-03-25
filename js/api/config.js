@@ -15,5 +15,5 @@ export const OPTIONS = {
 }
 
 export const BASE_URL = 'https://api.themoviedb.org/3/';
-export const BASE_URL_IMAGES = 'http://image.tmdb.org/t/p/';
+export const BASE_URL_IMAGES = 'https://image.tmdb.org/t/p/';
 
