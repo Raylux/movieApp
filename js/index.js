@@ -1,7 +1,7 @@
 import { createCardSection } from "./dom-manipulator/createCard.js";
-import { printAllTrending, getTrendingMovies, createList } from "./utils/modulesHub.js";
+import { printAllTrending, getTrending, createList } from "./utils/modulesHub.js";
 
-const trendingData = getTrendingMovies()
+const trendingData = getTrending()
 .then((data) => {
     createCardSection("card-container", data.results);
 });

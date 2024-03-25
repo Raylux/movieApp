@@ -4,9 +4,6 @@ export const createCard = (title, description, backdropPath) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
-    // card.style.backgroundImage = `url(${BASE_URL_IMAGES}w780/${backdropPath})`; 
-    // card.style.backgroundSize = "cover";
-
     // create backdrop image of the card
     const backdrop = document.createElement("img");
     backdrop.classList.add("backdrop");
@@ -39,7 +36,8 @@ export const createCardSection = (containerId, array) => {
     const cardContainer = document.getElementById(containerId);
 
     array.forEach((element) => {
-        const card = createCard(element.title, element.overview, element.backdrop_path)
+        const title = element.title ?? element.name;
+        const card = createCard(title, element.overview, element.backdrop_path);
         cardContainer.appendChild(card);
     });
 }
