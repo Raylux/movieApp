@@ -1,4 +1,41 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
 .card {
-    max-width: 500px;
-    border: solid gray 2px;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.card-info {
+    margin: 15px;
+
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.backdrop {
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
 }

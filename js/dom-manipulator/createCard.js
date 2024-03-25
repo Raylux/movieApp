@@ -4,10 +4,13 @@ export const createCard = (title, description, backdropPath) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
-    //create backdrop image of the card
+    // card.style.backgroundImage = `url(${BASE_URL_IMAGES}w780/${backdropPath})`; 
+    // card.style.backgroundSize = "cover";
+
+    // create backdrop image of the card
     const backdrop = document.createElement("img");
     backdrop.classList.add("backdrop");
-    backdrop.src = `${BASE_URL_IMAGES}w300/${backdropPath}`;
+    backdrop.src = `${BASE_URL_IMAGES}w780/${backdropPath}`;
     card.appendChild(backdrop);
 
     //create card text container
@@ -23,7 +26,7 @@ export const createCard = (title, description, backdropPath) => {
     //create card description
     const cardDescription = document.createElement("p");
     cardDescription.classList.add("card-description");
-    cardDescription.innerText = description;
+    cardDescription.innerText = truncateText(description, 200);
     cardInfo.appendChild(cardDescription);
 
     card.appendChild(cardInfo);
@@ -39,4 +42,8 @@ export const createCardSection = (containerId, array) => {
         const card = createCard(element.title, element.overview, element.backdrop_path)
         cardContainer.appendChild(card);
     });
+}
+
+export const truncateText = (text, limit) => {
+    return text.length > limit ? text.substring(0, limit) + "..." : text;
 }
