@@ -37,6 +37,7 @@ h1, h2 {
     margin: 20px;
     background-color: #F2E9E4;
     
+    border: 1px solid #b3a299;
     border-radius: 15px;
     box-shadow: 0px 0px 5px #F2E9E4;
 }
@@ -52,7 +53,7 @@ h1, h2 {
 }
 
 .card-description {
-    font-size: 16px;
+    font-size: 14px;
     color: #4A4E69;
 }
 
