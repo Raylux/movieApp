@@ -13,7 +13,7 @@ export const createList = (listId, array) => {
 
     array.forEach((element) => {
         const listItem = document.createElement("li");
-        listItem.innerText = element;
+        listItem.innerText = element.title;
         list.appendChild(listItem);
     });
 }

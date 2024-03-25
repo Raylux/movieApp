@@ -9,22 +9,8 @@
 <body>
     <h1 id="header">Titolo</h1>
     <div id="card-container">
-        <div class="card">
-
-        </div>
-        <img src="https://image.tmdb.org/t/p/w300/deLWkOLZmBNkm8p16igfapQyqeq.jpg" alt="test">
-        <img src="https://image.tmdb.org/t/p/w154/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg" alt="test">
+        
     </div>
     <ul id="movie-list"></ul>
 </body>
-
-<script type="module">
-    import { printAllTrending, getTrendingMovies, createList } from "./js/index.js";
-
-    const trendingData = getTrendingMovies()
-    .then((data) => {
-        printAllTrending(data.results);
-        createList("movie-list", data.results);
-    });
-</script>
 </html>
